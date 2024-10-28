@@ -1,6 +1,6 @@
 import os
 
-restaurantes = []
+restaurantes = ["restaurente 1", "restau2", "restauranete3", "restaurante 4",]
 
 def exibir_nome_programa():
     print("Sabor Express\n")
@@ -26,7 +26,14 @@ def cadastrar_novo_restaurante():
     main()
 
 def listar_restaurantes():
-    print(restaurantes)
+    os.system("clear")  
+    print("Listando restaurantes..")
+
+    for restaurante in restaurantes:
+        print(f".{restaurante}")
+        
+    input("Digite uma tecla para voltar ao menu principal...")
+    main()
 
 def escolher_opcao():
     #Por padrao o input espera uma string, por isso é nessesario colocar como int explicitamente... 
